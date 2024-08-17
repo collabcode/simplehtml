@@ -1,6 +1,9 @@
-/* Add styles here */
+
+body{
+    
+}
 header{
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #949494;
 }
 main {
 }
@@ -8,6 +11,6 @@ main {
 }
 
 footer{
-    border-top: 1px solid #303030;
+    border-top: 1px solid #c9c9c9;
     font-size: smaller;
 }

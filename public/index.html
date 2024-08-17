@@ -3,36 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Hello World</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
   <link href='./styles/style.css' rel='stylesheet'>
   <script src="https://unpkg.com/htmx.org@2.0.2"></script>
 <script lang="javascript">
   urlp=[];s=location.toString().split('?');s=s[1].split('&');for(i=0;i<s.length;i++){u=s[i].split('=');urlp[u[0]]=u[1];}
-  if(urlp.loc==undefined){urlp.loc='home';}
-</script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDfiVL64WL2xPBJ1X4GqxdiV_2EXR-gUsw",
-    authDomain: "iscool-82d08.firebaseapp.com",
-    projectId: "iscool-82d08",
-    storageBucket: "iscool-82d08.appspot.com",
-    messagingSenderId: "396165503285",
-    appId: "1:396165503285:web:b25d5c1ac56fb7c296d47c",
-    measurementId: "G-7MLKPM06VC"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  if(urlp.loc==undefined){urlp.loc='login.html';}
 </script>
 </head>
 <body>
@@ -42,8 +20,11 @@
     </div>
   </main>
   <script defer type="text/javascript" src="./scripts/main.js"></script>
+  <script defer type="module" src="./scripts/firebase-myscripts.js"></script>
   <script>
+
     if (urlp.loc) {
+      console.log(urlp.loc);
       const contentDiv = document.getElementById('content');
       contentDiv.setAttribute('hx-get', `./${urlp.loc}`);
       contentDiv.setAttribute('hx-trigger', `load`);
