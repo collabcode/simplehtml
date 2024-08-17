@@ -1,5 +1,6 @@
 /* Add styles here */
 header{
+    border-bottom: 1px solid #555;
 }
 main {
 }
@@ -7,4 +8,6 @@ main {
 }
 
 footer{
+    border-top: 1px solid #303030;
+    font-size: smaller;
 }
